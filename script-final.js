@@ -171,5 +171,8 @@
                 // on STOPPE
                 clearInterval(count_Interval);
                 count_down_div.textContent = 'game over';//affiche game over a la fin du jeu 
+                    var synth = window.speechSynthesis;
+                var utterance1 = new SpeechSynthesisUtterance('game over');
+                synth.speak(utterance1);
             }, total_delay);
         }
