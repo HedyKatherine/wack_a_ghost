@@ -62,7 +62,6 @@ h1 {
   font-family: 'Roboto', sans-serif;
   width: 70%;
   margin-bottom: 40px;
-  
 }
 
 .board {
@@ -71,7 +70,6 @@ h1 {
   border: solid rgba(251, 255, 0, 0.961) 3px;
   position: relative;
   height: 300px;
-
 }
 .board .score {
   font-size: 3em;
@@ -109,15 +107,14 @@ h1 {
   margin: auto;
 }
 
-.hole {
+.place {
   flex: 1 0 33.33%;
   overflow: hidden;
   position: relative;
 }
 
-.hole:after {
+.place:after {
   display: block;
-
   background-size: contain;
   content: '';
   width: 100%;
@@ -127,8 +124,7 @@ h1 {
   bottom: -30px;
 }
 
-.mole {
- 
+.image {
   background-size: 60%;
   position: absolute;
   top: 100%;
@@ -137,7 +133,7 @@ h1 {
   transition:all 0.4s;
 }
 
-.hole.up .mole {
+.place.up .image {
   top: 0;
 }
 
