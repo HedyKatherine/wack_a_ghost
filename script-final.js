@@ -119,9 +119,9 @@
             score += 10;
             this.parentNode.classList.remove('up');
             scoreBoard.textContent = score;
-             var synth = window.speechSynthesis;
-                var utterance2 = new SpeechSynthesisUtterance("t'as pas pusher!");
-                synth.speak(utterance2);
+                var synth = window.speechSynthesis;
+            var utterance2 = new SpeechSynthesisUtterance("push push push");
+            synth.speak(utterance2);
         }
 
  // -------------------------------------------------CURSOR -----------------------------
