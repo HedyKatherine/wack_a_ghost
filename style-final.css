@@ -1,0 +1,146 @@
+* {
+  cursor: none;
+}
+
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  height: 100vh;
+  background-color: #030b37;
+  color: whitesmoke;
+  font-family: "Press Start 2P", cursive;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+  line-height: 1em;
+  margin-bottom: 5vh;
+}
+
+
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #030b37; /* Fallback color */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #071c94;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  border-radius: 20px;
+  border: solid rgba(251, 255, 0, 0.959) 3px;
+  width: 40%; /* Could be more or less, depending on screen size */
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.rules-text {
+  font-size: 18px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  width: 70%;
+  margin-bottom: 40px;
+  
+}
+
+.board {
+  background-color: #071c94;
+  border-radius: 50px;
+  border: solid rgba(251, 255, 0, 0.961) 3px;
+  position: relative;
+  height: 300px;
+
+}
+.board .score {
+  font-size: 3em;
+}
+
+
+.cursor img {
+  position: absolute;
+  height: 125px;
+  z-index: 2;
+  transform: translate(-10px, -40px);
+  /* pour que l'image se place au même niveau que le curseur */
+  pointer-events: none;
+  /* pour que l'image puisse agir comme un curseur (appui sur un bouton, etc.) */
+}
+
+/* animation curseur --> mouvement qui frappe */
+@keyframes hit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-30deg);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
+
+
+.game {
+  width: 600px;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.hole {
+  flex: 1 0 33.33%;
+  overflow: hidden;
+  position: relative;
+}
+
+.hole:after {
+  display: block;
+
+  background-size: contain;
+  content: '';
+  width: 100%;
+  height:70px;
+  position: absolute;
+  z-index: 2;
+  bottom: -30px;
+}
+
+.mole {
+ 
+  background-size: 60%;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  transition:all 0.4s;
+}
+
+.hole.up .mole {
+  top: 0;
+}
+
+.container {
+  margin-top: 20vh;
+}

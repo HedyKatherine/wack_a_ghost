@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style-final.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Russo+One&display=swap" rel="stylesheet">
+    <!-- favicon -->
+    <link rel="icon" href="images/ghost-5.svg" />
+    <title>Wack a Ghost - Jeu</title>
+</head>
+
+<body>
+
+
+    <div id="rules" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <h1>Les règles du Jeu</h1>
+            <p class="rules-text">
+                Frappe les fantomes qui aparaissent de façon aléatoire, pour un temps aléatoire sur l'écran.
+                Accumule le plus de point possible en cliquant sur maximum de fantome et en évitant les babies.
+                Appuie du play pour commencer!
+            </p>
+            <button onClick="startGame()">Play!</button>
+        </div>
+    </div>
+
+
+    <div class="container d-flex">
+        <div class="game">
+            <div class="hole hole1 ">
+                <div class="mole"></div>
+            </div>
+            <div class="hole hole2">
+                <div class="mole"></div>
+            </div>
+            <div class="hole hole3">
+                <div class="mole"></div>
+            </div>
+            <div class="hole hole4">
+                <div class="mole"></div>
+            </div>
+            <div class="hole hole5">
+                <div class="mole"></div>
+            </div>
+            <div class="hole hole6">
+                <div class="mole"></div>
+            </div>
+        </div>
+
+        <div class="board col-lg-3 ml-auto">
+            <div class="text-center mt-4">
+                <p>Score : <span class="score">0</span></p>
+                <h2 id="count_down_div"></h2>
+            </div>
+            <div class="restart text-center">
+                <button type="button" class="btn btn-outline-warning" onClick="startGame()">Restart</button>
+            </div>
+        </div>
+    </div>
+    <div class="cursor">
+        <img src="./images/cursor.svg" alt="Curseur illustration rouleau à pâtisserie">
+    </div>
+
+    <audio id="sound1" src="sounds/clap.wav"></audio>
+    <audio id="sound2" src="sounds/snare.wav"></audio>
+    <audio id="sound3" src="sounds/tink.wav"></audio>
+
+    <script type="text/javascript" src="script-final.js"></script>
+</body>
+
+</html>
