@@ -120,7 +120,7 @@
             this.parentNode.classList.remove('up');
             scoreBoard.textContent = score;
                 var synth = window.speechSynthesis;
-            var utterance2 = new SpeechSynthesisUtterance("push push push");
+            var utterance2 = new SpeechSynthesisUtterance("push");
             synth.speak(utterance2);
         }
 
